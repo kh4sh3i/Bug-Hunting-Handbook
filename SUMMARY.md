@@ -4,8 +4,9 @@
 
 ## The Company
 
-* [Vision and Values](the-company/vision-and-values.md)
-* [Meet the Team!](the-company/meet-the-team.md)
+* [injection](the-company/injection.md)
+* [XML Entity Injecton (XXE)](the-company/xml-entity-injecton-xxe.md)
+* [Cross Site Scripting (XSS)](the-company/cross-site-scripting-xss.md)
 
 ## The Formal Stuff
 

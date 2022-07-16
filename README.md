@@ -4,6 +4,7 @@ coverY: 0
 
 # The Pentester's Guide
 
-## Welcome aboard!
+## Welcome hacker!
 
-Welcome to the company wiki! Here you'll find everything you need to know about the company.
+Welcome to Bug Hunting Handbook. This book will contain list of resources that will help bug bounty hunters with resources that are useful during their bug bounty journey.&#x20;
+
