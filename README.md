@@ -1,8 +1,4 @@
----
-coverY: 0
----
-
-# The Pentester's Guide
+# Bug Hunting Handbook
 
 ## Welcome hacker!
 
