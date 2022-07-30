@@ -10,4 +10,7 @@
 * [CORS](cors.md)
 * [SSRF](ssrf.md)
 * [Path Traversal](path-traversal.md)
+* [Command Injection](command-injection.md)
+* [Rate Limit](rate-limit.md)
+* [Access Control](access-control.md)
 * [XML Entity Injecton (XXE)](xml-entity-injecton-xxe.md)
