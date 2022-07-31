@@ -15,3 +15,4 @@
 * [Access Control](access-control.md)
 * [IDOR](xml-entity-injecton-xxe.md)
 * [Race Condition](race-condition.md)
+* [Prototype pollution](prototype-pollution.md)
