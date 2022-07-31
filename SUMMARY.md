@@ -16,3 +16,4 @@
 * [IDOR](xml-entity-injecton-xxe.md)
 * [Race Condition](race-condition.md)
 * [Prototype pollution](prototype-pollution.md)
+* [Dependency Confusion](dependency-confusion.md)
