@@ -17,3 +17,5 @@
 * [Race Condition](race-condition.md)
 * [Prototype pollution](prototype-pollution.md)
 * [Dependency Confusion](dependency-confusion.md)
+* [Server-Side JS Injection](server-side-js-injection.md)
+* [ReDos](redos.md)

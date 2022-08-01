@@ -40,3 +40,22 @@ https://github.com/eth0izzle/shhgit
 ```
 https://github.com/visma-prodsec/confused
 ```
+
+### find init file (DC + LFI/SSRF)
+
+if target company not use github, then we find "LFI" bug in site and then read some file like: package.json , require.txt ,... to find private repository.
+
+good tools for find hidden parameter in blank page for login page is arjun tools
+
+```
+- Hidden Parameter Discovery:
+    - https://github.com/s0md3v/Arjun/
+    - https://github.com/sh1yo/x8
+```
+
+### prevention
+
+```
+    - https://blog.packagist.com/preventing-dependency-hijacking/
+```
+
