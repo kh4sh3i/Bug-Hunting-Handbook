@@ -19,3 +19,4 @@
 * [Dependency Confusion](dependency-confusion.md)
 * [Server-Side JS Injection](server-side-js-injection.md)
 * [ReDos](redos.md)
+* [postMessage](postmessage.md)
