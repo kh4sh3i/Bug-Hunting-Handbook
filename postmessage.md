@@ -43,3 +43,13 @@ if sender send sensitive data like token,crsf,password,.. and use "\*" in origin
     - nuclei -l urls -t nuclei-templates/headless/postmessage-outgoing-tracker.yaml --headless 
 ```
 
+### chaining
+
+```
+ - postMessage -> dom xss + info disclosure
+ - csrf 
+  - token -> value + filed -> 5 bug ?
+  - authenticated path -> .postmessage(token, '*')
+  - listener -> token -> form -> request (update) -> csrf
+```
+
