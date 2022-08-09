@@ -22,3 +22,8 @@
 * [postMessage](postmessage.md)
 * [JSONP](jsonp.md)
 * [DOM Clobbering](dom-clobbering.md)
+* [CSTI](csti.md)
+* [SSTI](ssti.md)
+* [XXE Injection](xxe-injection.md)
+* [ORM Injection](orm-injection.md)
+* [NOSQL Injection](nosql-injection.md)
