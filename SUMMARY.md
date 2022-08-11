@@ -31,3 +31,4 @@
 * [Web Cache Deception](web-cache-deception.md)
 * [Web Cache Poisoning](web-cache-poisoning.md)
 * [Edge-Side Inclusion](edge-side-inclusion.md)
+* [Request Smuggling](request-smuggling.md)
